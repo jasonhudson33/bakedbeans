@@ -114,6 +114,7 @@
 
 .bake-rebake-btns {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #nutrition-facts {

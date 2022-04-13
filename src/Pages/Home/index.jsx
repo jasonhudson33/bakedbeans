@@ -33,12 +33,12 @@ function Home() {
 
                     <div style={{ marginTop: 50 }}>
                         <div className='beans-amount-container'>
-                            <div className='beans-amount-label'>Beans</div>
-                            <div className='beans-amount'>0 BEANS</div>
-                        </div>
-                        <div className='beans-amount-container'>
                             <div className='beans-amount-label'>Contract</div>
                             <div className='beans-amount'>0 BNB</div>
+                        </div>
+                        <div className='beans-amount-container'>
+                            <div className='beans-amount-label'>Beans</div>
+                            <div className='beans-amount'>0 BEANS</div>
                         </div>
                     </div>
 
