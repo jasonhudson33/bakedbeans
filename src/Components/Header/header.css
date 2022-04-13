@@ -46,6 +46,7 @@
     align-items: center;
     background-color: #fafafa;
     border-radius: 15px;
+    border: none;
     cursor: pointer;
     color: #000;
     display: flex;

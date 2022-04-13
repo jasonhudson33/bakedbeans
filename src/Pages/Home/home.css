@@ -63,6 +63,7 @@
 .beans-amount {
     font-size: 22px;
     margin-left: 10px;
+    text-transform: uppercase;
 }
 
 .input-container {
@@ -93,6 +94,7 @@
 .bake-beans-btn {
     align-items: center;
     background-color: #126180;
+    border: none;
     cursor: pointer;
     color: #ffffff;
     display: flex;

@@ -34,7 +34,7 @@ function Home() {
                     <div style={{ marginTop: 50 }}>
                         <div className='beans-amount-container'>
                             <div className='beans-amount-label'>Beans</div>
-                            <div className='beans-amount'>0 Beans</div>
+                            <div className='beans-amount'>0 BEANS</div>
                         </div>
                         <div className='beans-amount-container'>
                             <div className='beans-amount-label'>Contract</div>
@@ -51,21 +51,21 @@ function Home() {
                         <div>BNB</div>
                     </div>
 
-                    <div className='bake-beans-btn'>
+                    <button className='bake-beans-btn'>
                         Bake Beans
-                    </div>
+                    </button>
                     <div className='bake-rebake-btns'>
-                        <div className='bake-beans-btn'>
+                        <button className='bake-beans-btn'>
                             Re-bake Beans
-                        </div>
-                        <div className='bake-beans-btn'>
+                        </button>
+                        <button className='bake-beans-btn'>
                             Eat Beans
-                        </div>
+                        </button>
                     </div>
                 </section>
 
                 <section id='nutrition-facts'>
-                    <div className='nutrition-facts-title'>Nutrition Fact</div>
+                    <div className='nutrition-facts-title'>Nutrition Facts</div>
                     <div className='nutrition-facts-element-container'>
                         <div className='nutrition-facts-element'>Daily Return</div>
                         <div className='nutrition-facts-element'>8%</div>

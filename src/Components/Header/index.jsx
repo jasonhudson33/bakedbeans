@@ -17,7 +17,7 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div className='connect'>Connect</div>
+            <button className='connect'>Connect</button>
         </div>
     );
 }
