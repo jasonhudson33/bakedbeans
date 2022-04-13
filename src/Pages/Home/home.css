@@ -1,0 +1,244 @@
+#home {
+    background: linear-gradient( 45deg, #060D0D, #5C258D);
+    color: #fff;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.gold-pile {
+    background-image: url("../../Assets/golden-nuggets.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    margin: auto;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5%;
+
+    position: relative;
+
+    height: 10rem;
+    width: 10rem;
+}
+
+.wallet-amount-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -2%;
+    text-align: center;
+    width: auto;
+}
+
+.wallet-amount-label {
+    font-size: 16px;
+}
+.wallet-amount {
+    font-size: 50px;
+}
+
+.beans-amount-container {
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0 15px 0;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    left: 0;
+    right: 0
+}
+
+.beans-amount-label {
+    font-size: 18px;
+    align-items: center;
+}
+.beans-amount {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.input-container {
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    color: #ffffff;
+    display: flex;
+    font-size: 18px;
+    font-weight: normal;
+    height: 50px;
+    justify-content: center;
+    margin: 2rem auto auto auto;
+    left: 0;
+    right: 0;
+    width: 50vh;
+}
+.input {
+    border: 0;
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: normal;
+    outline: none;
+    width: 85%
+}
+
+.bake-beans-btn {
+    align-items: center;
+    background-color: #126180;
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    margin: 20px auto auto auto;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    transition: transform .5s;
+    width: 10rem;
+}
+.bake-beans-btn:hover {
+    background-color: #002e63;
+    transform: scale(1.05);
+}
+
+.bake-rebake-btns {
+    display: flex;
+}
+
+#nutrition-facts {
+    background: transparent;
+    border-radius: 15px;
+    margin: 5rem auto 5rem auto;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    width: 30rem;
+    height: auto;
+}
+.nutrition-facts-title {
+    align-items: center;
+    border-bottom: 2px solid #fff;
+    color: #ffffff;
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.nutrition-facts-element-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#referral-link {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin-top: 10vh;
+    margin-bottom: 5rem;
+}
+.referral-link-label {
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.referral-link-input {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    outline: none;
+    padding: 0 5px 0 5px;
+    font-size: 20px;
+    margin: 2rem auto auto auto;
+    width: 25rem;
+}
+.referral-link-text {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px
+}
+
+@media only screen and (max-width: 590px) {
+    .wallet-amount-container {
+        text-align: center;
+        display: flex;
+        width: auto;
+        margin-top: -2%;
+        justify-content: center;
+    }
+    .wallet-amount-label {
+        font-size: 13px;
+    }
+    .wallet-amount {
+        font-size: 40px;
+    }
+    .beans-amount-container {
+        align-items: center;
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 0 15px 0;
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        left: 0;
+        right: 0
+    }
+    
+    .beans-amount-label {
+        font-size: 16px;
+        align-items: center;
+    }
+    .beans-amount {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .input-container {
+        align-items: center;
+        background-color: transparent;
+        border-bottom: 2px solid #fff;
+        color: #ffffff;
+        display: flex;
+        font-size: 18px;
+        font-weight: normal;
+        height: 50px;
+        justify-content: center;
+        margin: 2rem auto auto auto;
+        left: 0;
+        right: 0;
+        width: 90%;
+    }
+
+    #nutrition-facts {
+        background: transparent;
+        border-radius: 15px;
+        margin: 5rem auto 5rem auto;
+        left: 0;
+        right: 0;
+        text-transform: uppercase;
+        width: 80%;
+        height: auto;
+    }
+    .referral-link-input {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        outline: none;
+        padding: 0 5px 0 5px;
+        font-size: 20px;
+        margin: 2rem auto auto auto;
+        width: 80%;
+    }
+}
