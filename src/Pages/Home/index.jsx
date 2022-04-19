@@ -1,12 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { Helmet } from 'react-helmet-async';
+
+import axios from 'axios';
 
 import './home.css';
 
-import { Helmet } from 'react-helmet-async';
 import Header from '../../Components/Header';
 
 
 function Home() {
+
+    const [bnbInput, setBnbInput] = useState('')
+
+    const [balance, setBalance] = useState()
+
+    useEffect(() => {
+        async function getUser() {
+            try {
+                const response = await axios.get(
+                    'https://api-testnet.bscscan.com/api?module=account&action=balance&address=0x5d975D82897687307aa4158BA52B884E030BEaEF&apikey=47F3HQHWIJVW42F3G27FV1BCFKQRWTA94D'
+                );
+                setBalance(response.data.result)
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        getUser()
+    }, [])
+
+    const one_wei = 1000000000000000000
+
+    const wei_to_bnb = balance / one_wei
+
     return (
         <div id='home'>
             <Helmet>
@@ -19,7 +46,7 @@ function Home() {
                 <link rel='canonical' href='/' />
             </Helmet>
 
-            <Header />
+            <Header balance={balance} />
 
             <div className="home-content">
                 <section>
@@ -27,7 +54,7 @@ function Home() {
                         <div className="gold-pile" />
                         <div className='wallet-amount-container'>
                             <div className='wallet-amount-label'>Wallet</div>
-                            <div className='wallet-amount'>0 BNB</div>
+                            <div className='wallet-amount'>{wei_to_bnb} BNB</div>
                         </div>
                     </div>
 
@@ -38,7 +65,7 @@ function Home() {
                         </div>
                         <div className='beans-amount-container'>
                             <div className='beans-amount-label'>Beans</div>
-                            <div className='beans-amount'>0 BEANS</div>
+                            <div className='beans-amount'>{balance} BEANS</div>
                         </div>
                     </div>
 
@@ -47,19 +74,20 @@ function Home() {
                             placeholder='0'
                             type='text'
                             className='input'
+                            onChange={(e) => setBnbInput(e.target.value)}
                             autoFocus={true} />
                         <div>BNB</div>
                     </div>
 
                     <button className='bake-beans-btn'>
-                        Bake Beans
+                        Buy Gold
                     </button>
                     <div className='bake-rebake-btns'>
                         <button className='bake-beans-btn'>
-                            Re-bake Beans
+                            Bury Gold
                         </button>
                         <button className='bake-beans-btn'>
-                            Eat Beans
+                            Sell Gold
                         </button>
                     </div>
                 </section>
@@ -86,7 +114,8 @@ function Home() {
                         <input
                             type='text'
                             placeholder='referal link'
-                            className='referral-link-input' />
+                            className='referral-link-input'
+                            disabled={true} />
                         <div className='referral-link-text'>
                             Earn 12% of the BNB used to bake
                             beans from anyone who uses your referral link.

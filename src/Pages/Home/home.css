@@ -113,7 +113,7 @@
 }
 
 .bake-rebake-btns {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
 }
 
@@ -158,12 +158,14 @@
 }
 .referral-link-input {
     align-items: center;
-    justify-content: center;
+    background-color: #ffffff;
+    color: #000000;
     display: flex;
+    font-size: 20px;
+    justify-content: center;
+    margin: 2rem auto auto auto;
     outline: none;
     padding: 0 5px 0 5px;
-    font-size: 20px;
-    margin: 2rem auto auto auto;
     width: 25rem;
 }
 .referral-link-text {
